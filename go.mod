@@ -1,8 +1,7 @@
 module github.com/anchore/fangs
 
-go 1.24.0
 
-toolchain go1.24.1
+go 1.26.2
 
 require (
 	dario.cat/mergo v1.0.2

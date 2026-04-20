@@ -28,7 +28,7 @@ func Test_isPromotedMethod(t *testing.T) {
 	require.True(t, isPromotedMethod(t2, "AddFlags"))
 
 	// reflect-created structs do not include promoted methods
-	tt1 := reflect.TypeOf(t1)
+	tt1 := reflect.TypeFor[*Ty1]()
 	f := tt1.Elem().Field(1)
 	ty3 := reflect.StructOf([]reflect.StructField{f})
 	t3 := reflect.New(ty3).Interface()
